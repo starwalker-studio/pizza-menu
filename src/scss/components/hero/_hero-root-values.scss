@@ -1,0 +1,6 @@
+@use "hero-contants" as const;
+
+:root {
+  --hero-background-image: #{const.$hero-background-image};  
+  --hero-height: #{const.$hero-height};
+}

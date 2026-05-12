@@ -1,0 +1,46 @@
+@mixin section {
+  width: 100%;
+  position: relative;
+}
+
+@mixin container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  scroll-behavior: smooth;
+}
+
+@mixin wrapper {
+  width: 100%;
+  max-width: 1500px;
+  display: flex;
+  align-items: center;
+}
+
+@mixin content {
+  margin: 32px 0 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin header {
+  padding: 0 32px;
+  h2 {
+    font-size: 4.4rem;
+    color: var(--color-secondary);
+    opacity: 0.8;
+    font-weight: 100;
+  }
+}
+
+@mixin item_card_style {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 1.125rem 1.25rem;
+}

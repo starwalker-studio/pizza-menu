@@ -1,0 +1,22 @@
+@use "main-constants" as const;
+
+:root {
+  --font-display: #{const.$font-display};
+  --font-abril: #{const.$font-abril};
+  --font-lobster: #{const.$font-lobster};
+  --font-lato: #{const.$font-lato};
+  --font-nunito: #{const.$font-nunito};
+  --font-dm: #{const.$font-dm};
+  --color-white: #{const.$color-white};
+  --color-primary: #{const.$color-primary};
+  --color-primary-hover: #{const.$color-primary-hover};
+  --color-secondary: #{const.$color-secondary};
+  --color-secondary-hover: #{const.$color-secondary-hover};
+  --color-dark: #{const.$color-dark};
+  --color-light: #{const.$color-light};
+  --color-text: #{const.$color-text};
+  --color-muted: #{const.$color-muted};
+  --border-radius-sm: #{const.$border-radius-sm};
+  --border-radius-md: #{const.$border-radius-md};
+  --border-radius-lg: #{const.$border-radius-lg};
+}

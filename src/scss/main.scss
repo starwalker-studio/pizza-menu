@@ -1,0 +1,46 @@
+@forward "base";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-lato);
+  font-size: 16px;
+  color: var(--color-text);
+  background-color: var(--color-dark);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-family: var(--font-lobster);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+h2 {
+  font-family: var(--font-abril);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+}
+p {
+  font-family: var(--font-lato);
+  font-size: 1rem;
+}

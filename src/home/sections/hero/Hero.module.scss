@@ -1,0 +1,50 @@
+@use "/src/scss/components/hero/hero-style" as *;
+@use "/src/scss/utils/" as *;
+@forward "/src/scss/components/hero";
+@forward "/src/scss/base/";
+
+.hero {
+  @include background-section-style;
+  background-image: var(--hero-background-image);
+  height: var(--hero-height);
+  @include mobile {
+    padding: 20px
+  }
+}
+
+.overlay {
+  @include overlay-style;
+}
+
+.content {
+  display: flex;
+  justify-content: left;
+  position: relative;
+  z-index: 2;
+  max-width: 1050px;
+  @include mobile {
+    justify-content: center;
+  }
+  .content_text {
+    text-align: left;
+    padding: 1ex;
+    color: var(--color-white);
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 7rem);
+      font-weight: 700;
+      margin-bottom: 15px;
+      opacity: 0.8;
+      line-height: 1;
+    }
+    h1[data-color="orange"] {
+      font-size: clamp(3rem, 7vw, 8.6rem);
+      color: var(--color-secondary);
+    }
+
+    p {
+      font-size: 1.8rem;
+      margin: 38px 0 38px;
+      opacity: 0.9;
+    }
+  }
+}

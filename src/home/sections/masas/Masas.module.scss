@@ -1,0 +1,71 @@
+@forward "/src/scss/base/";
+@use "/src/scss/layout/" as *;
+@use "/src/scss/utils/" as *;
+
+.mss_section {
+  @include section;
+}
+
+.mss_container {
+  @include container;
+}
+
+.mss_wrapper {
+  @include wrapper;
+  justify-content: center;
+}
+
+.mss_content {
+  @include content;
+  .mss_header {
+    @include header;
+    @include mobile {
+      h2 {font-size: 2.2rem;}
+    }
+  }
+}
+
+.mss_grid_4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  @include mobile {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin: 42px 0 42px;
+  padding: 0 12px;
+  .mss_card {
+    @include item_card_style;
+    background-color: black;
+    color: var(--color-white);
+    border: solid 1px color-mix(in srgb, var(--color-primary) 40%, transparent);
+    border-radius: var(--border-radius-lg);
+    padding: 22px;
+    h3 {
+      color: var(--color-secondary);
+      font-size: 1.8rem;
+      @include mobile {
+        font-size: 1.4rem;
+      }
+      font-weight: 200;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: 1.3rem;
+      font-weight: 700;
+      @include mobile {
+        font-size: 1rem;
+      }
+    }
+    img {
+      border-radius: var(--border-radius-md);
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+      opacity: 0.78;
+    }
+  }
+}

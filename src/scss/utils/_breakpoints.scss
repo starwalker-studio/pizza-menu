@@ -1,0 +1,84 @@
+// responsive mobile
+
+// ==========================
+// Breakpoints (SASS Utils)
+// ==========================
+
+// Escala de breakpoints (inspirado en Material y Bootstrap, ajustado)
+// Smartphones
+$breakpoint-xs: 390px; // móviles muy pequeños
+$breakpoint-sm: 480px; // móviles pequeños
+$breakpoint-md: 600px; // móviles grandes
+$breakpoint-lg: 768px; // móviles extra grandes
+$breakpoint-xl: 1024px; // móviles 4k, 8k
+
+// Tablets
+$breakpoint-tablet-sm: 768px; // iPad Mini portrait / tablets chicas
+$breakpoint-tablet-md: 810px; // iPad 10ª gen portrait
+$breakpoint-tablet-lg: 834px; // iPad Air / Pro portrait
+$breakpoint-tablet-xl: 1024px; // iPad Pro landscape / laptops pequeñas
+
+// Desktop
+$breakpoint-desktop: 1280px; // laptops normales
+$breakpoint-desktop-lg: 1440px; // monitores grandes
+$breakpoint-desktop-xl: 1920px; // pantallas full HD / wide
+
+@mixin xs {
+  @media only screen and (max-width: #{$breakpoint-xs}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media only screen and (max-width: #{$breakpoint-sm}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media only screen and (max-width: #{$breakpoint-xl}) {
+    @content;
+  }
+}
+
+@mixin tablet-sm {
+  @media (min-width: #{$breakpoint-tablet-sm}) and (max-width: #{$breakpoint-tablet-md - 1}) {
+    @content;
+  }
+}
+
+@mixin tablet-md {
+  @media (min-width: #{$breakpoint-tablet-md}) and (max-width: #{$breakpoint-tablet-lg - 1}) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media (min-width: #{$breakpoint-tablet-lg}) and (max-width: #{$breakpoint-tablet-xl - 1}) {
+    @content;
+  }
+}
+
+@mixin tablet-xl {
+  @media (min-width: #{$breakpoint-tablet-xl}) and (max-width: #{$breakpoint-desktop - 1}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$breakpoint-lg - 1}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$breakpoint-lg}) and (max-width: #{$breakpoint-xl - 1}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}

@@ -1,0 +1,82 @@
+@forward "/src/scss/base/";
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.75rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  letter-spacing: 0.02em;
+
+  &.disabled {
+    cursor: not-allowed;
+    background-color: var(--color-muted);
+    display: block;
+    pointer-events: none;
+  }
+
+  &.primary {
+    background-color: var(--color-primary);
+    color: #fff;
+    border-color: var(--color-primary);
+
+    &:hover {
+      background-color: var(--color-primary-hover);
+      border-color: var(--color-primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(249, 115, 22, 0.35);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+  }
+  
+  &.secondary {
+    background-color: var(--color-secondary);
+    color: #fff;
+    border-color: var(--color-secondary);
+
+    &:hover {
+      background-color: var(--color-secondary-hover);
+      border-color: var(--color-secondary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(249, 115, 22, 0.35);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+  }
+
+  &.outline {
+    background-color: transparent;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+
+    &:hover {
+      background-color: var(--color-primary-hover);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+  }
+
+  &.whatsApp {
+    background-color: #147538;
+    color: var(--color-white);
+    border-color: transparent;
+
+    &:hover {
+      background-color: #25d366;
+      color: var(--color-dark);
+      gap: 0.7rem;
+    }
+  }
+}
