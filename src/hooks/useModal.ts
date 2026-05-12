@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import type { Masa, Pizza, Tamano } from "../ts/menu.interface";
 
-export const useModal = (product: Pizza) => {
+export const useModal = (product?: Pizza) => {
   const [ingredientes, setIngredientes] = useState(
     () =>
       product?.ingredientes.map((ing) => ({
@@ -13,7 +13,7 @@ export const useModal = (product: Pizza) => {
   const [precios, setPrecios] = useState(
     product?.precios.map((p) => ({ ...p, selected: false, cantidad: 1 })) ?? [],
   );
-  const [masaSeleccionada, setMasaSeleccionada] = useState<Masa>(
+  const [masaSeleccionada, setMasaSeleccionada] = useState<Masa | undefined>(
     product?.masasDisponibles[0],
   );
 

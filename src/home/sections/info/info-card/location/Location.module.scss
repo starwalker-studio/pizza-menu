@@ -1,0 +1,53 @@
+@forward "/src/scss/components/card/";
+
+.mapa_placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: color-mix(in srgb, var(--color-white) 5%, transparent);
+  border: dashed 1px color-mix(in srgb, var(--color-white) 20%, transparent);
+  border-radius: var(--border-radius-md);
+  padding: 2.5rem;
+  flex: 1;
+
+  p {
+    font-size: 0.85rem;
+    opacity: 0.4;
+  }
+}
+
+.mapa_icon {
+  font-size: 2.5rem;
+  opacity: 0.3;
+}
+
+.mapa_sitio {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mapa_sitio_title {
+  font-size: 0.85rem;
+  color: var(--color-secondary);
+  font-weight: 500;
+}
+
+.mapa_sitio ul {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  li a {
+    font-size: 0.85rem;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 1;
+      color: var(--color-secondary);
+    }
+  }
+}

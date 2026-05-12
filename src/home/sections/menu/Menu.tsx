@@ -1,18 +1,18 @@
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import { forwardRef, useState } from "react";
 import { Modal } from "../../../components/common/modal/Modal";
 import { Button } from "../../../components/ui/button/Button";
 import { menu } from "../../../ts/menu";
 import type { Pizza } from "../../../ts/menu.interface";
 import style from "./Menu.module.scss";
 
-export const Menu = () => {
+export const Menu = forwardRef<HTMLDivElement>((_, ref) => {
   const [modal, setModal] = useState<boolean>(false);
   const [product, setProduct] = useState<Pizza>();
   return (
     <>
-      <div className={style.menu_section}>
+      <section ref={ref} className={style.menu_section}>
         <div className={style.menu_container}>
           <div className={style.menu_wrapper}>
             <div className={style.menu_content}>
@@ -54,7 +54,7 @@ export const Menu = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <Modal
         key={product?.id}
         isOpen={modal}
@@ -63,4 +63,4 @@ export const Menu = () => {
       />
     </>
   );
-};
+});

@@ -1,0 +1,48 @@
+@forward "/src/scss/base/";
+@use "/src/scss/layout/" as *;
+@use "/src/scss/utils/" as *;
+
+.info_section {
+  @include section;
+  padding: 4rem 0;
+}
+
+.info_container {
+  @include container;
+}
+
+.info_wrapper {
+  @include wrapper;
+  justify-content: center;
+  padding: 0 22px;
+}
+
+.info_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.info_card {
+  background: #000;
+  border: solid 1px color-mix(in srgb, var(--color-primary) 40%, transparent);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  color: var(--color-white);
+
+  h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--color-secondary);
+    border-bottom: dashed 1px color-mix(in srgb, var(--color-secondary) 30%, transparent);
+    padding-bottom: 0.75rem;
+  }
+}

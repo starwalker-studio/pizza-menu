@@ -18,7 +18,7 @@ export interface CartItem {
   id: number;
   nombre: string;
   imagen?: string;
-  masa: Masa;
+  masa?: Masa;
   tamanos: TamanoSeleccionado[];
   ingredientesExtras: IngredienteCart[];
   precioBase: number;

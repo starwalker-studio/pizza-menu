@@ -9,7 +9,7 @@ import style from "./Modal.module.scss";
 type ModalProps = {
   isOpen: boolean;
   onClose: () => void;
-  product: Pizza;
+  product?: Pizza | undefined;
 };
 
 export const Modal = ({ isOpen, onClose, product }: ModalProps) => {

@@ -1,0 +1,52 @@
+@forward "/src/scss/components/card/";
+
+.opiniones_list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.opinion_item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  border-bottom: solid 0.5px
+    color-mix(in srgb, var(--color-white) 10%, transparent);
+  padding-bottom: 0.75rem;
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+.opinion_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.opinion_nombre {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-secondary);
+}
+
+.estrellas {
+  display: flex;
+  gap: 3px;
+  font-size: 0.8rem;
+}
+
+.star_on {
+  color: var(--color-secondary);
+}
+.star_off {
+  color: #444;
+}
+
+.opinion_texto {
+  font-size: 0.85rem;
+  opacity: 0.75;
+  line-height: 1.5;
+}
