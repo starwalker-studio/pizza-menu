@@ -32,13 +32,20 @@
   @include mobile {
     grid-template-columns: repeat(1, 1fr);    
   }
+  @include ipad-air-11 {
+    grid-template-columns: repeat(1, 1fr);    
+  }
+  @include ipad-pro-11 {
+    grid-template-columns: repeat(1, 1fr);    
+  }
+  @include ipad-mini {
+    grid-template-columns: repeat(1, 1fr);    
+  }
   gap: 2rem;
   justify-content: center;
   align-items: start;
   margin: 42px 0 2px;
-  .pizza_card {
-    @include mobile {
-  }
+  .pizza_card {    
     display: flex;
     background-color: black;
     border-radius: var(--border-radius-lg);

@@ -31,6 +31,15 @@
   @include mobile {
     grid-template-columns: repeat(1, 1fr);
   }
+  @include ipad-air-11 {
+    grid-template-columns: repeat(1, 1fr);    
+  }
+  @include ipad-pro-11 {
+    grid-template-columns: repeat(1, 1fr);    
+  }
+  @include ipad-mini {
+    grid-template-columns: repeat(1, 1fr);    
+  }
   gap: 2rem;
   justify-content: center;
   align-items: center;

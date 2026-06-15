@@ -1,6 +1,7 @@
 import style from "./Footer.module.scss";
 
 export const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <footer>
       <div className={style.footer_background}>
@@ -13,7 +14,7 @@ export const Footer = () => {
                 Menu demo para pizzería/restaurante con enfoque en negocio
                 minimalista.
               </p>
-              <p>Copyright 2026 © Disenmix</p>
+              <p>Copyright {currentYear} © Disenmix</p>
             </div>
           </div>
         </div>

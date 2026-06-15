@@ -23,6 +23,75 @@ $breakpoint-desktop: 1280px; // laptops normales
 $breakpoint-desktop-lg: 1440px; // monitores grandes
 $breakpoint-desktop-xl: 1920px; // pantallas full HD / wide
 
+// -----------------------------------------------------------------------------
+// 1. VARIABLES — Anchos portrait (breakpoint principal de cada tablet)
+// -----------------------------------------------------------------------------
+
+// --- Apple iPads ---
+$tablet-ipad-mini-7:          744px;   // iPad mini 7 (A17 Pro, 2024) — 8.3"
+$tablet-ipad-10:               810px;   // iPad 10th gen (A16, 2024) — 10.2"
+$tablet-ipad-air-11:           820px;   // iPad Air 11" M3/M4 (2025–2026)
+$tablet-ipad-pro-11:           834px;   // iPad Pro 11" M4/M5 (2024–2025)
+$tablet-ipad-air-13:          1024px;   // iPad Air 13" M3/M4 (2025–2026)
+$tablet-ipad-pro-13:          1032px;   // iPad Pro 13" M4/M5 (2024–2025)
+
+// --- Samsung Galaxy Tab ---
+$tablet-samsung-a9-87:         800px;   // Galaxy Tab A9 8.7" / A11 8.7" / FE 10.9"
+$tablet-samsung-s9-11:         884px;   // Galaxy Tab S9 11" / S11 11"
+$tablet-samsung-s9-plus:       876px;   // Galaxy Tab S9+ 12.4" / S10+ 12.4"
+$tablet-samsung-s9-ultra:      924px;   // Galaxy Tab S9 Ultra 14.6" / S11 Ultra
+
+// --- Lenovo ---
+$tablet-lenovo-m9:             800px;   // Tab M9 8.8"
+$tablet-lenovo-m10:            800px;   // Tab M10 Plus 10.6"
+$tablet-lenovo-p11-pro:        800px;   // Tab P11 Pro Gen2 11.2"
+$tablet-lenovo-p12-pro:        900px;   // Tab P12 Pro 12.7"
+
+// --- Amazon Fire ---
+$tablet-fire-hd8:              800px;   // Fire HD 8 (2024)
+$tablet-fire-hd10:             800px;   // Fire HD 10 (2023)
+$tablet-fire-max11:            800px;   // Fire Max 11 (2023)
+
+// --- Google ---
+$tablet-pixel-tablet:         1024px;   // Pixel Tablet 11" (2023)
+
+// --- Microsoft Surface ---
+$tablet-surface-go4:           720px;   // Surface Go 4 10.5"
+$tablet-surface-pro11:         912px;   // Surface Pro 11 13"
+
+// --- Mixin por dispositivo específico (portrait) ---
+// Útil cuando necesitas afinar para un modelo concreto
+
+@mixin ipad-mini {
+  @media only screen and (min-width: $tablet-ipad-mini-7) and (max-width: ($tablet-ipad-10 - 1px)) {
+    @content;
+  }
+}
+
+@mixin ipad-air-11 {
+  @media only screen and (min-width: $tablet-ipad-air-11) and (max-width: ($tablet-ipad-pro-11 - 1px)) {
+    @content;
+  }
+}
+
+@mixin ipad-pro-11 {
+  @media only screen and (min-width: $tablet-ipad-pro-11) and (max-width: ($tablet-ipad-air-13 - 1px)) {
+    @content;
+  }
+}
+
+@mixin ipad-air-13 {
+  @media only screen and (min-width: $tablet-ipad-air-13) and (max-width: ($tablet-ipad-pro-13 - 1px)) {
+    @content;
+  }
+}
+
+@mixin ipad-pro-13 {
+  @media only screen and (min-width: $tablet-ipad-pro-13) {
+    @content;
+  }
+}
+
 @mixin xs {
   @media only screen and (max-width: #{$breakpoint-xs}) {
     @content;
